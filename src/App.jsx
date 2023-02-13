@@ -1,5 +1,12 @@
+import { BrowserRouter } from 'react-router-dom'
+import SearchEngineRouter from './routes/SearchEngineRouter'
+
 function App () {
-  return <div></div>;
+  return (
+    <BrowserRouter>
+      <SearchEngineRouter />
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
