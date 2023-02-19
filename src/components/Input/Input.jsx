@@ -1,14 +1,18 @@
+import { useContext } from 'react'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 import { useNavigate } from 'react-router-dom'
+import { GlobalContext } from '../../context/GlobalContext'
 
 const Input = () => {
+  const { captureValue } = useContext(GlobalContext)
   const navigate = useNavigate()
+
   const handleSearching = (e) => {
     e.preventDefault()
-    // const value = e.target.inputSearch.value
+    const value = e.target.inputSearch.value
+    captureValue(value)
     navigate('/results')
   }
-
   return (
       <>
         <form className='w-3/5 relative' onSubmit={handleSearching}>
