@@ -4,13 +4,15 @@ import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../context/GlobalContext'
 
 const Input = () => {
-  const { captureValue } = useContext(GlobalContext)
+  const { captureValue, setCurrentPage, setlimit } = useContext(GlobalContext)
   const navigate = useNavigate()
 
   const handleSearching = (e) => {
     e.preventDefault()
     const value = e.target.inputSearch.value
     captureValue(value)
+    setCurrentPage(1)
+    setlimit(10)
     navigate('/results')
   }
   return (
