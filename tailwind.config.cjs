@@ -13,7 +13,7 @@ module.exports = {
         'Righteous': ['"Righteous"', 'cursive']
       },
       backgroundImage: {
-        'bgHome': "url('./src/image/bg3.jpg')"        
+        'bgHome': "url('../src/image/bg3.jpg')"        
       }
     }
   },
