@@ -1,5 +1,15 @@
+import { BrowserRouter } from 'react-router-dom'
+import GlobalProvider from './context/GlobalProvider'
+import SearchEngineRouter from './routes/SearchEngineRouter'
+
 function App () {
-  return <div></div>;
+  return (
+    <BrowserRouter>
+      <GlobalProvider>
+        <SearchEngineRouter />
+      </GlobalProvider>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
